@@ -1,64 +1,94 @@
-# build output
+# ----------------------------------------------------------------------------
+# Python 기본
+# ----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Byte-compiled / optimized / DLL files
+*.egg
+*.egg-info/
 dist/
+build/
 
-# generated types
-.astro/
+# ----------------------------------------------------------------------------
+# 가상환경
+# ----------------------------------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+.venv.bak/
+venv.bak/
+env.bak/
+ENV.bak/
 
-# dependencies
-.pnp
-.pnp.js
-.yarn/install-state.gz
-node_modules
-dist
-dist-ssr
-*.local
-.vite/*
+# ----------------------------------------------------------------------------
+# OS/에디터별 임시 파일
+# ----------------------------------------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
 
-# testing
-/coverage
+# Windows
+Thumbs.db
+ehthumbs.db
+*.lnk
 
-# next.js
-.next
-out
+# Visual Studio Code
+.vscode/
+.history/
 
-# production
-/build
+# PyCharm
+.idea/
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# ----------------------------------------------------------------------------
+# 환경변수/민감 정보(예: API 키, 비밀번호)
+# ----------------------------------------------------------------------------
+*.env
+.env.*
+# API 키 관련 임시 파일 (OpenAI API, LangChain, etc.)
+*secret*
+*token*
+*config.json
+credentials.json
+auth.json
+
+# ----------------------------------------------------------------------------
+# 테스트 / 로그 / 커버리지
+# ----------------------------------------------------------------------------
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
 
 # Logs
-logs
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+logs/
+log/
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+# ----------------------------------------------------------------------------
+# 기타 (LangChain, LLM 활용 시 권장)
+# ----------------------------------------------------------------------------
+# langchain에서 캐시 사용 시(예: sqlite 캐시 파일)
+langchain.db
+langchain_cache.db
 
-# Misc
-.DS_Store
-.env
-.env.local
-.env.test
-.env.development
-.env.staging
-.env.production
+# huggingface transformer 다운로드 캐시(필요 시)
+huggingface_cache/
+transformers_cache/
 
-# PNPM
-.pnpm-store/**
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# ----------------------------------------------------------------------------
+# Docker (필요 없는 경우 제거)
+# ----------------------------------------------------------------------------
+*.swp
+Dockerfile
+docker-compose.yml
+.dockerignore

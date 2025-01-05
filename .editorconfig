@@ -1,0 +1,9 @@
+root = true
+
+[*.py]  # Python 파일에만 적용
+indent_style = space
+indent_size = 4
+
+[*]  # 모든 파일에 적용
+indent_style = space
+indent_size = 4

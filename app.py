@@ -10,21 +10,21 @@ api_key = os.environ.get("GEMINI_API_KEY")
 
 
 def main():
-  try:
-      genai.configure(api_key=api_key)
-      model = genai.GenerativeModel("gemini-1.5-flash")
-      chat = model.start_chat(history=[])
+    try:
+        genai.configure(api_key=api_key)
+        model = genai.GenerativeModel("gemini-1.5-flash")
+        chat = model.start_chat(history=[])
 
-      while True:
-          message = input("Q)")
-          if (message == "exit"):
-              break
-          response = chat.send_message(message)
-          print("A)")
-          print(response.text)
+        while True:
+            message = input("Q)")
+            if message == "exit":
+                break
+            response = chat.send_message(message)
+            print("A)")
+            print(response.text)
 
-  except Exception as e:
-      print("알 수 없는 오류 발생:", e)
+    except Exception as e:
+        print("알 수 없는 오류 발생:", e)
 
 
 if __name__ == "__main__":

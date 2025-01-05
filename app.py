@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-import google.generativeai as genai
+import google.generativeai as genai  # type: ignore
 
 # (1) .env 파일 로드
 load_dotenv()  # 기본적으로 현재 프로젝트 루트/실행 위치의 .env를 탐색합니다.
